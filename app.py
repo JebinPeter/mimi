@@ -1,9 +1,9 @@
 from flask import Flask, jsonify, request
-from flask_restful import Resource, Api
 import pickle
 import numpy as np
+
+
 app = Flask(__name__)
-api = Api(app)
 
 model = pickle.load(open('F:\sem 3\Mini Project\API\model_jebin','rb'))
 
