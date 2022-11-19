@@ -32,9 +32,9 @@ def predict():
     result = model.predict(input_data_reshaped)[0]
 
     if result == 1:
-        return jsonify({'Good mood': str(result)})
+        return jsonify({'mood': str('good')})
     else:
-        return jsonify({'bad mood': str(result)})
+        return jsonify({'mood': str('bad')})
 
 
 # class getEmotion(Resource):
