@@ -14,7 +14,7 @@ def home():
     return "Hello world"
 
 
-@app.route('/predict',methods = ['POST'])
+@app.route('/predict',methods = ['GET'])
 
 def predict():
     happy = request.form.get('happy')
