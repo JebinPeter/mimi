@@ -5,7 +5,7 @@ import numpy as np
 
 app = Flask(__name__)
 
-model = pickle.load(open('F:\sem 3\Mini Project\API\model_jebin','rb'))
+model = pickle.load(open('model_jebin','rb'))
 
 @app.route('/')
 def home():
