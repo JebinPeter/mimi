@@ -5,7 +5,9 @@ import numpy as np
 
 app = Flask(__name__)
 
-model = pickle.load(open('model_jebin','rb'))
+with open('model_jebin','rb') as f:
+
+    model = pickle.load(f)
 
 @app.route('/')
 def home():
@@ -13,6 +15,7 @@ def home():
 
 
 @app.route('/predict',methods = ['POST'])
+
 def predict():
     happy = request.form.get('happy')
     sad = request.form.get('sad')
